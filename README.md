@@ -12,6 +12,26 @@ SVM / KNN / MLP) trained on hand-landmark data to recognise gestures, and
 
 ---
 
+## Quick start (clone and run)
+
+```bash
+git clone <your-repo-url>
+cd "AI Based Hand recignition"
+```
+
+- **Windows:** double-click **`startup.bat`**.
+- **Linux / macOS:** `bash startup.sh`.
+
+Either script creates the virtual environment, installs the dependencies, downloads
+the hand model, trains a sample classifier if none exists, and launches the app.
+You need Python 3.10–3.12, a webcam, and internet for the first run.
+
+The trained model (`models/gesture_model.joblib`) and the pretrained hand model
+(`models/hand_landmarker.task`) ship with the repo, so a fresh clone runs without
+extra downloads.
+
+---
+
 ## Problem statement
 
 Operating a computer through physical input devices (mouse, keyboard, touchpad) is

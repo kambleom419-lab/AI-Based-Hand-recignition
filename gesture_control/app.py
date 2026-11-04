@@ -71,7 +71,8 @@ def run():
             prev_time = now
 
             paused = gesture is gestures.Gesture.PAUSE
-            ui.draw_status(frame, gesture.value, source, fps, paused, classifier.ready)
+            ui.draw_status(frame, gesture.value, source, fps, paused,
+                           config.GESTURE_ENGINE == "ml" and classifier.ready)
 
             cv2.imshow(config.WINDOW_NAME, frame)
             if cv2.waitKey(1) & 0xFF in (config.EXIT_KEY, config.ESC_KEY):

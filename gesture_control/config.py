@@ -42,7 +42,9 @@ SCROLL_DEBOUNCE = 0.15  # seconds between scroll events
 
 # --- Machine learning ---------------------------------------------------------
 # Which recogniser drives the actions: "ml" (classifier + rule fallback) or "rules".
-GESTURE_ENGINE = "ml"
+# Use "rules" until a classifier trained on real landmark data exists - a model
+# trained on the synthetic sample data mislabels real hands.
+GESTURE_ENGINE = "rules"
 MODEL_PATH = os.path.join(PROJECT_ROOT, "models", "gesture_model.joblib")
 METRICS_PATH = os.path.join(PROJECT_ROOT, "models", "metrics.json")
 

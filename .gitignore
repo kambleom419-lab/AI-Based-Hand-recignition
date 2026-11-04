@@ -19,14 +19,11 @@ venv/
 env/
 ENV/
 
-# --- Generated datasets (recreated by tools/make_sample_data.py or Kaggle) ---
-data/
-
-# --- Model artifacts (recreated by tools/train_model.py and first run) --------
-models/gesture_model.joblib
-models/metrics.json
-models/confusion_matrix_*.png
-models/*.task
+# --- Datasets ------------------------------------------------------------------
+# The small bundled sample dataset is kept so a fresh clone can train at once;
+# the downloaded Kaggle data and evaluation logs are not committed.
+data/raw/
+data/*.csv
 
 # --- Secrets / logs ------------------------------------------------------------
 kaggle.json
