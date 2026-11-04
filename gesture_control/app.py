@@ -3,6 +3,7 @@
 import time
 
 import cv2
+import pyautogui
 
 from . import config, gestures, ui
 from .camera import Camera
@@ -77,6 +78,8 @@ def run():
                 break
 
             prev_gesture = gesture
+    except pyautogui.FailSafeException:
+        print("Fail-safe triggered (cursor moved to a screen corner) - stopping.")
     finally:
         camera.release()
         tracker.close()
