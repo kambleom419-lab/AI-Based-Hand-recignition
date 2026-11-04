@@ -1,0 +1,45 @@
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# --- Test / type-check caches ------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Virtual environments ----------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# --- Generated datasets (recreated by tools/make_sample_data.py or Kaggle) ---
+data/
+
+# --- Model artifacts (recreated by tools/train_model.py and first run) --------
+models/gesture_model.joblib
+models/metrics.json
+models/confusion_matrix_*.png
+models/*.task
+
+# --- Secrets / logs ------------------------------------------------------------
+kaggle.json
+.kaggle/
+*.log
+
+# --- Editors / OS --------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Command Code local state -------------------------------------------------
+.commandcode/
