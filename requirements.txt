@@ -1,0 +1,20 @@
+# Core runtime dependencies
+# MediaPipe 1.x (Tasks API) and OpenCV 5 require NumPy 2.x.
+numpy>=2.0
+mediapipe>=1.0
+opencv-python>=4.10
+pyautogui>=0.9.54
+
+# Machine learning (training + inference)
+scikit-learn>=1.4
+joblib>=1.3
+pandas>=2.2
+
+# Dataset download
+kaggle>=1.6
+
+# Optional (confusion-matrix figures)
+matplotlib>=3.7
+
+# Development / testing
+pytest>=7.4
