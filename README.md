@@ -91,7 +91,6 @@ Priority when several match: **pause → pinch → scroll → move**.
 
 ```
 main.py                     run the app
-conftest.py                 makes gesture_control importable in tests
 requirements.txt
 gesture_control/            application package (see table above)
 tools/
@@ -99,7 +98,6 @@ tools/
   make_sample_data.py       generate a synthetic keypoint dataset (no webcam needed)
   train_model.py            train & compare SVM / KNN / MLP, save the best
   evaluate.py               record live gesture trials and report metrics
-tests/                      unit tests for the gesture + feature logic
 data/                       datasets (raw + generated)
 models/                     trained model + metrics + confusion matrices
 ```
@@ -177,15 +175,6 @@ python tools/evaluate.py
 Make each gesture and press the matching key (`1`..`6`) to record a trial. On exit it
 prints accuracy, per-class precision/recall/F1, a confusion matrix and FPS statistics,
 and saves the raw trials to `data/evaluation_results.csv`.
-
-## Tests
-
-```bash
-pytest
-```
-
-Covers the rule-based classifier and the feature extractor (translation/scale
-invariance).
 
 ---
 

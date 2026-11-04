@@ -25,6 +25,14 @@ ENV/
 data/raw/
 data/*.csv
 
+# --- Report / personal documents -----------------------------------------------
+Hand_Gesture_Control_Mini_Project_Report Shivendra.pdf
+Hand_Gesture_Control_Mini_Project_Report Shivendra.md
+
+# --- Unit tests (kept locally, not shipped) ------------------------------------
+tests/
+conftest.py
+
 # --- Secrets / logs ------------------------------------------------------------
 kaggle.json
 .kaggle/
